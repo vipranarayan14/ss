@@ -1,0 +1,22 @@
+{
+  "name": "ss",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && babel src -d dist --minified",
+    "eslint": "eslint ./**/*.js",
+    "precommit": "npm run eslint",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "eslint": "4.15.0",
+    "husky": "0.14.3",
+    "rimraf": "2.6.2"
+  }
+}
